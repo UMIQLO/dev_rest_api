@@ -78,17 +78,6 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django',
-        'USER': 'root',
-        'PASSWORD': 'umiqlo',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
-        'OPTIONS': {
-            'init_command': 'SET innodb_strict_mode=1',
-        },
-    },
-    'mp': {
-        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mp_app',
         'USER': 'root',
         'PASSWORD': 'umiqlo',
@@ -98,9 +87,20 @@ DATABASES = {
             'init_command': 'SET innodb_strict_mode=1',
         },
     },
+    # 'mp': {
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'mp_app',
+        # 'USER': 'root',
+        # 'PASSWORD': 'umiqlo',
+        # 'HOST': '127.0.0.1',
+        # 'PORT': '3306',
+        # 'OPTIONS': {
+            # 'init_command': 'SET innodb_strict_mode=1',
+        # },
+    # },
 }
 
-DATABASE_ROUTERS = ['SimpleDatabaseRouter.SimpleDatabaseRouter']
+# DATABASE_ROUTERS = ['SimpleDatabaseRouter.SimpleDatabaseRouter']
 
 
 # Password validation
