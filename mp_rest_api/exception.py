@@ -8,5 +8,5 @@ def custom_exception_handler(exc, context):
     # Now add the HTTP status code to the response.
     if response is not None:
         response.data['status_code'] = response.status_code
-        response.data = json_encode(response.data)
+        response.data = json_result(response.data, False)
     return response
