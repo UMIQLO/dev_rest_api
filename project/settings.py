@@ -44,6 +44,9 @@ INSTALLED_APPS = [
 REST_FRAMEWORK = {
     'EXCEPTION_HANDLER': (
         'mp_rest_api.exception.custom_exception_handler'
+    ),
+    'DEFAULT_PARSER_CLASSES': (
+        'rest_framework.parsers.JSONParser', #default receive json format request 
     )
 }
 
