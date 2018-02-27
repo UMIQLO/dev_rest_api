@@ -40,7 +40,7 @@ class UserSerializer(serializers.ModelSerializer):
             # "data" : data,
         # }
         # return formated_data
-
+        
 class MusicSerializer(serializers.ModelSerializer):
     class Meta:
         model = Music

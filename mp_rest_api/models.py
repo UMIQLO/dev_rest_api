@@ -15,7 +15,7 @@ from django.contrib.auth.models import User
         
     # class Meta:
         # db_table = 'mp_user'
-
+        
 class UserGroup(models.Model):
     name = models.CharField(max_length=254)
     user = models.ManyToManyField(User)

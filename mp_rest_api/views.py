@@ -15,7 +15,7 @@ class UserViewSet(viewsets.ModelViewSet):
     def list(self, request, *args, **kwargs):
         response_data = super(UserViewSet, self).list(request, *args, **kwargs)
         return Response(json_result(response_data.data, True))
-    # create function in serializers
+    # create function already in serializers
     # def create(self, request, *args, **kwargs):
         # response_data = super(UserViewSet, self).create(request, *args, **kwargs)
         # return Response(json_result(response_data.data, True))
@@ -40,6 +40,7 @@ class UserViewSet(viewsets.ModelViewSet):
         else:
             # throw not found exceptions to display error result
             raise exceptions.NotFound()
+        
     
 class MusicViewSet(viewsets.ModelViewSet):
     queryset = Music.objects.all()
