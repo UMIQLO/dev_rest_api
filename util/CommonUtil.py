@@ -6,7 +6,7 @@ def current_timestamp():
     ts = calendar.timegm(time.gmtime())
     return ts
 
-def json_encode(data, status=False):
+def json_encode(data, status=True):
     response = {
         "success": status,
         "server_time": current_timestamp(),
