@@ -26,5 +26,6 @@ router.register('music', mp.MusicViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('ses/', mp.SendEmail),
     path('mp/api/', include(router.urls)),
 ]
